@@ -37,5 +37,9 @@ if user_character == user_word[3]:
 if user_character == user_word[4]:
     indecies = indecies + 1
 
-print(str(indecies) + " instances of " + user_character + " found in " + user_word)
-
+if indecies == 0:
+    print("No instances of " + user_character + " found in " + user_word)
+if indecies == 1:
+    print("1 instance of " + user_character + " found in " + user_word)
+if indecies > 1:
+    print(str(indecies) + " instances of " + user_character + " found in " + user_word)
