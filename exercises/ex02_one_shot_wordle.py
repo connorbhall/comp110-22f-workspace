@@ -23,7 +23,7 @@ while i < len(SECRET):
     if user_word[i] == SECRET[i]:
         wordle += str(green_box)
     else:
-        while bool(index) is not True and ii < 6:
+        while bool(index) is not True and ii < len(SECRET):
             if user_word[i] == SECRET[ii]:
                 index = True
                 wordle += str(yellow_box)
