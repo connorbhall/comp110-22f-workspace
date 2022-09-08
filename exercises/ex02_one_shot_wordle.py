@@ -2,7 +2,7 @@
 
 __author__ = "730465288"
 
-SECRET: str = "cookie"
+SECRET: str = "python"
 guess: str = len(SECRET)
 
 user_word: str = str(input(f"What is your {guess} letter guess? "))
