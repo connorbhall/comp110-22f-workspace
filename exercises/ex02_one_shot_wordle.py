@@ -29,7 +29,7 @@ while i < len(SECRET):
                 wordle += str(yellow_box)
             else: 
                 ii += 1
-        if bool(index) == False:
+        if bool(index) is False:
             wordle += str(white_box)
         else: 
             index = False  
@@ -39,6 +39,6 @@ while i < len(SECRET):
 print(wordle)
 
 if str(user_word) == str(SECRET):
-    print(f"Woo! You got it!")
+    print("Woo! You got it!")
 else:
     print("Not quite. Play again soon!")
