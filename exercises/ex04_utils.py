@@ -2,21 +2,19 @@
 
 __author__ = 730465288
 
-from re import I
-
 
 def all(integers: list[int], number: int) -> bool:
-    "A function that checks each index of a list to see if they match the given int."
-    i: int = 1
+    """A function that checks each index of a list to see if they match the given int."""
+    i: int = 0
     check: bool = False
 
     while i < len(integers):
         if integers[i] == number:
             check = True
         if integers[i] != number:
-            check = False
+            return False
         i += 1
-    return print(check)
+    return check
 
 
 def max(input: list[int]) -> int:
@@ -32,6 +30,8 @@ def max(input: list[int]) -> int:
             i += 1
         elif maxint < input[i]: 
             maxint = input[i]
+            i += 1
+        elif maxint == input[i]:
             i += 1
         
     return maxint 
