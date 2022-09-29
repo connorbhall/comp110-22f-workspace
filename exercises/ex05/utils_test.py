@@ -10,7 +10,7 @@ from utils import only_evens, concat, sub
 def test_only_evens_empty() -> None:
     """Tests that only_even returns an empty list when given an empty list."""
     list_1: list[int] = []
-    assert only_evens([]) == []
+    assert only_evens(list_1) == []
 
 
 def test_only_evens_all_odds() -> None:
@@ -50,7 +50,7 @@ def test_concat() -> None:
 
 def test_sub() -> None:
     """Tests that sub returns a list of integers between the correct indecies from the initial list."""
-    assert sub([10, 20 , 30 ,40], 1, 3) == [20, 30]
+    assert sub([10, 20, 30, 40], 1, 3) == [20, 30]
 
 
 def test_sub_negative_start() -> None:
