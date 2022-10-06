@@ -158,7 +158,7 @@ def dealer_turn() -> None:
             print(".")
 
 
-def payout(win_loss: int, total_points: int) -> None:
+def payout(win_loss: int, total_points: int) -> int:
     """Determines if player wins or loses and then gives or takes points."""
     print(".")
     global bet_amount
