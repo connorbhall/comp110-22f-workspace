@@ -34,6 +34,8 @@ def bet(bet_points: int) -> None:
     global bet_amount
     print(".")
     bet_amount = int(input(f"{player}, How many points would you like to bet on this hand? "))
+    while bet_amount == 0:
+        bet_amount = int(input(f"Sorry {player}, but you can't bet 0! Try again: "))
     if bet_amount > bet_points:
         bet_amount = bet_points
         print(f"Oh, no! You only have {bet_points} points. Your bet is {bet_amount}.")
