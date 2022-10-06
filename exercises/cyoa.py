@@ -146,7 +146,7 @@ def dealer_turn() -> None:
         dealer_hand.append(new_card)
         dealer_total += new_card
         print(".")
-        print(f"The dealer has to hit!")
+        print("The dealer has to hit!")
         print(dealer_hand)
         if dealer_total > 21:
             print(f"The dealer busted at {dealer_total} points!")
