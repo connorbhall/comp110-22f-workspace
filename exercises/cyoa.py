@@ -1,4 +1,4 @@
-"""Choose Your Own Adventure: Blackjack"""
+"""Choose Your Own Adventure: Blackjack!"""
 
 
 __author__ = "730465288"
@@ -19,7 +19,7 @@ dealer_bust: bool = False
 def greet() -> None:
     """Greets the player."""
     global player
-    player = input(f"Welcome to blackjack! What would you like to be called? ")
+    player = input("Welcome to blackjack! What would you like to be called? ")
     print(".")
     print(f"Hello {player}! Let's get started!")
     print("-Each hand you'll bet a number of your points.\n-If you beat the dealer you win more points!")
@@ -52,7 +52,7 @@ def dealer_hand_deal() -> list[int]:
     
 
 def player_hand_deal() -> list[int]:
-    """Deals player's hand"""
+    """Deals player's hand."""
     from random import randint
     global player_hand
     player_hand = [deck[randint(0, 13)], deck[randint(0, 13)]]
@@ -86,7 +86,7 @@ def hit() -> bool:
         
 
 def double() -> bool:
-    """Allows player to double their initial bet and hit once"""
+    """Allows player to double their initial bet and hit once."""
     from random import randint
     global bet_amount
     global points
@@ -118,7 +118,7 @@ def player_turn() -> str:
     if player_decision == "hit":
         global player_bust
         player_bust = hit()
-        if player_bust == False:
+        if player_bust is False:
             return print(f"{player}'s final total: {player_total}\nDealer's turn...")
         else:
             return print(f"Oh no! You busted at {player_total}")
@@ -126,7 +126,7 @@ def player_turn() -> str:
         return print(f"{player}'s final total: {player_total}\nDealer's turn...")
     elif player_decision == "double":
         player_bust = double()
-        if player_bust == False:
+        if player_bust is False:
             return print(f"{player}'s final total: {player_total}\nDealer's turn...")
         else:
             return print(f"Oh no! You busted at {player_total}")
@@ -193,13 +193,13 @@ def play() -> bool:
     
 
 def main() -> None:
-    """Runs Blackjack"""
+    """Runs Blackjack."""
     play_again: bool = True
     mystery_card: str = "\U0001F0CF"
     global points
     points = 100
     greet()
-    while points > 0 and play_again == True:
+    while points > 0 and play_again is True:
         bet(points)
         dealer_hand_view: list[str] = [str(dealer_hand_deal()[0]), str(mystery_card)]
         print(".")
@@ -218,13 +218,13 @@ def main() -> None:
             global player_bust
             player_bust = False
             player_turn()
-            if player_bust == True:
+            if player_bust is True:
                 points = payout(0, points)
             else:
                 global dealer_bust
                 dealer_bust = False
                 dealer_turn()
-                if dealer_bust == True:
+                if dealer_bust is True:
                     points = payout(1, points)
                 elif dealer_total > player_total:
                     points = payout(0, points)
