@@ -108,7 +108,7 @@ def double() -> bool:
     return False
 
 
-def player_turn() -> str:
+def player_turn() -> None:
     """Forces player to make a decision whether to hit, stand, or double."""
     print(".")
     print(f"Okay {player}, you can either:\n-Stand (keep ur current total.)\n-Hit (add another number to your total.)\n-Double (double your bet size and hit once.)")
@@ -158,7 +158,7 @@ def dealer_turn() -> None:
             print(".")
 
 
-def payout(win_loss: int, total_points: int) -> int:
+def payout(win_loss: int, total_points: int) -> None:
     """Determines if player wins or loses and then gives or takes points."""
     print(".")
     global bet_amount
