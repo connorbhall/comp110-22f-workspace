@@ -173,7 +173,9 @@ def payout(win_loss: int, total_points: int) -> int:
     elif win_loss == 2:
         print(f"You and the dealer pushed! You stay at {total_points} points!")
         return total_points
-
+    else:
+        return total_points
+    
 
 def play() -> bool:
     """Asks player if they want to play another hand, or allows them to quit."""
