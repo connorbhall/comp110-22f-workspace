@@ -36,7 +36,6 @@ def favorite_color(color_dict: dict[str, str]) -> str:
             elif counting_color[key] > x:
                 x = counting_color[key]
                 common_color = key
-    print(counting_color)
     return common_color
 
 
