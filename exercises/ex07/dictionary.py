@@ -1,7 +1,7 @@
 """EX07 - Using functions to alter dictionaries."""
 
 
-__author__ = 730465288
+__author__ = "730465288"
 
 
 def invert(dict_1: dict[str, str]) -> dict[str, str]:

@@ -1,7 +1,7 @@
 """EX07 - Test functions in order to test dictionary.py functions."""
 
 
-__author__ = 730465288
+__author__ = "730465288"
 
 
 from dictionary import invert, favorite_color, count
@@ -63,7 +63,6 @@ def test_count_one_key() -> None:
 def test_count_rand_list() -> None:
     """Tests the functionality of count function."""
     assert count(['a', 'a', 'b', 'b', 'b', 'c', 'd', 'd', 'e']) == {'a': 2, 'b': 3, 'c': 1, 'd': 2, 'e': 1}
-
 
 
 def test_count_empty_list() -> None:
