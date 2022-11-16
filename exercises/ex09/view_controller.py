@@ -36,7 +36,7 @@ class ViewController:
     def tick(self) -> None:
         """Update the model state and redraw visualization."""
         start_time = time_ns() // NS_TO_MS
-        self.model.tick()
+        self.model.tick() 
         self.pen.clear()
         for cell in self.model.population:
             self.pen.penup()
