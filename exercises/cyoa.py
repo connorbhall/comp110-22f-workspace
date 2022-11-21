@@ -139,12 +139,12 @@ def dealer_turn() -> None:
     from random import randint
     global dealer_hand
     global dealer_total
-    new_card: int = deck[randint(0, 13)]
     print(".")
     print(dealer_hand)
     print(f"Dealer's total is: {dealer_total}")
     print(".")
     while dealer_total <= 16:
+        new_card: int = deck[randint(0, 13)]
         dealer_hand.append(new_card)
         dealer_total += new_card
         print(".")
